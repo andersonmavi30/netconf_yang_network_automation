@@ -88,3 +88,18 @@ It enables:
 - RESTCONF examples
 - CI/CD validation pipeline
 - Dockerized execution environment
+
+
+## Use Cases Implemented
+
+This lab includes structured examples for:
+
+- NETCONF session establishment and capability discovery
+- Interface operational state retrieval using subtree filters
+- VLAN provisioning and removal via edit-config
+- Loopback interface provisioning using ietf-interfaces
+- OSPF process configuration
+- SNMP configuration automation
+- ACL provisioning using Cisco native model
+- Configuration validation before commit
+- Candidate datastore workflow and transactional commit
