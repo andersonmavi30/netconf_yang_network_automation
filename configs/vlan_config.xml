@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+NETCONF VLAN Configuration Example
+Author: Anderson Martinez Virviescas
+Project: netconf_yang_network_automation
+-->
+
+<config>
+    <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+        <vlan>
+            <vlan-list>
+                <id>10</id>
+                <name>DEVNET_VLAN</name>
+            </vlan-list>
+        </vlan>
+    </native>
+</config>
