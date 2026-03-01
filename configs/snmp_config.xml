@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+NETCONF SNMP Configuration Example
+Author: Anderson Martinez Virviescas
+Project: netconf_yang_network_automation
+-->
+
+<config>
+    <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+        <snmp-server>
+            <community>
+                <name>DEVNET_COMMUNITY</name>
+                <ro/>
+            </community>
+        </snmp-server>
+    </native>
+</config>
