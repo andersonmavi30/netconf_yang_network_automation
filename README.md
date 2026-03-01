@@ -1,5 +1,11 @@
 # NETCONF and YANG Network Automation Lab
 
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![NETCONF](https://img.shields.io/badge/Protocol-NETCONF-green)
+![YANG](https://img.shields.io/badge/Model-YANG-orange)
+![Cisco IOS-XE](https://img.shields.io/badge/Platform-Cisco_IOS--XE-red)
+![Infrastructure as Code](https://img.shields.io/badge/Approach-Infrastructure_as_Code-purple)
+
 Author: Anderson Martinez Virviescas
 
 ---
