@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+NETCONF Subtree Filter Example - VLAN
+Author: Anderson Martinez Virviescas
+Project: netconf_yang_network_automation
+-->
+
+<filter>
+    <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+        <vlan/>
+    </native>
+</filter>
