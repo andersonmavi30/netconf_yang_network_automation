@@ -47,10 +47,10 @@ netconf_yang_network_automation/
 
 ## NETCONF Operations Demonstrated
 
-- <get>
-- <edit-config>
-- <validate>
-- <commit>
+- get
+- edit-config
+- validate
+- commit
 - candidate datastore workflow
 
 ---
