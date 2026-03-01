@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+NETCONF Subtree Filter Example - Interfaces
+Author: Anderson Martinez Virviescas
+Project: netconf_yang_network_automation
+-->
+
+<filter>
+    <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces"/>
+</filter>
