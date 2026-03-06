@@ -82,6 +82,18 @@ It enables:
 
 ---
 
+
+## Current Repository Status
+
+This project currently combines:
+
+- **implemented examples** (for NETCONF connectivity and capability discovery), and
+- **guided templates** (scripts intentionally prepared for future completion).
+
+If you want to start contributing changes, check the initial review and roadmap:
+
+- `docs/revision_inicial.md`
+
 ## Future Improvements
 
 - OpenConfig model integration
