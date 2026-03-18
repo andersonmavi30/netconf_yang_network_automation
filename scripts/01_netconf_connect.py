@@ -4,34 +4,45 @@
 NETCONF Connectivity Script
 ---------------------------
 Establishes a NETCONF session to a Cisco IOS-XE device
-and retrieves server capabilities.
+and prints server capabilities.
+
+Usage:
+    python 01_netconf_connect.py --host 192.0.2.1 --username admin --password secret
+    # or set NETCONF_HOST / NETCONF_USERNAME / NETCONF_PASSWORD env vars
 
 Author: Anderson Martinez Virviescas
 Project: netconf_yang_network_automation
 """
 
-from ncclient import manager
+import argparse
+import logging
+
+from netconf_client import get_connection
+
+logger = logging.getLogger(__name__)
 
 
 def netconf_connect(host, username, password):
     """
-    Establish NETCONF session and print server capabilities.
+    Open a NETCONF session and print every server capability URI.
+
+    The capability list tells us which YANG models and NETCONF features
+    the device supports (e.g. candidate datastore, confirmed-commit, etc.).
     """
-    with manager.connect(
-        host=host,
-        port=830,
-        username=username,
-        password=password,
-        hostkey_verify=False
-    ) as m:
-        print("NETCONF session established")
+    with get_connection(host, username, password) as m:
+        print("\n--- Server Capabilities ---")
         for capability in m.server_capabilities:
             print(capability)
+        print(f"\nTotal capabilities: {len(list(m.server_capabilities))}")
 
 
 if __name__ == "__main__":
-    HOST = "192.0.2.1"
-    USERNAME = "netconf_user"
-    PASSWORD = "netconf_password"
+    parser = argparse.ArgumentParser(
+        description="Connect to a device via NETCONF and list its capabilities"
+    )
+    parser.add_argument("--host", default=None, help="Device IP/hostname (or set NETCONF_HOST)")
+    parser.add_argument("--username", default=None, help="NETCONF username (or set NETCONF_USERNAME)")
+    parser.add_argument("--password", default=None, help="NETCONF password (or set NETCONF_PASSWORD)")
+    args = parser.parse_args()
 
-    netconf_connect(HOST, USERNAME, PASSWORD)
+    netconf_connect(args.host, args.username, args.password)
