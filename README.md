@@ -1,5 +1,7 @@
 # NETCONF and YANG Network Automation Lab
 
+🇨🇴 [Español](README.es.md)
+
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![NETCONF](https://img.shields.io/badge/Protocol-NETCONF-green)
 ![YANG](https://img.shields.io/badge/Model-YANG-orange)
